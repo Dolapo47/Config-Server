@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/assessment
+    username: postgres
+    password: Dolapo2021@@
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      format_sql: true
+  flyway:
+    baseline-on-migrate: true
+    enabled: true
+    user: postgres
+    password: Dolapo2021@@
+    baseline-description: "init"
+    baseline-version: 0
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+employee:
+  password: Password@123
+  user:
+    url: http://localhost:8081/employees/get/email/
+
+#  flyway:
+#    baseline-on-migrate: true
+#    locations: classpath:db/migration
+#    schemas: employee_management

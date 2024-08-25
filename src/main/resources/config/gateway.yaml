@@ -1,0 +1,22 @@
+spring:
+ config:
+  import: "configserver:http://localhost:8888"
+ cloud:
+  gateway:
+    routes:
+      - id: authentication
+        predicates:
+          - Path=/authentication/**
+        uri: lb://authentication
+      - id: employee
+        predicates:
+          - Path=/employee/**
+        uri: lb://employee
+
+server:
+  port: 8060
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0

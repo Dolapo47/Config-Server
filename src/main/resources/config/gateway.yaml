@@ -3,6 +3,9 @@ spring:
   import: "configserver:http://localhost:8888"
  cloud:
   gateway:
+    discovery:
+      locator:
+        enabled: true
     routes:
       - id: authentication
         predicates:

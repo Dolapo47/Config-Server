@@ -11,7 +11,7 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     show-sql: true
     properties:
       format_sql: true
@@ -19,7 +19,7 @@ spring:
     baseline-on-migrate: true
     enabled: true
     user: postgres
-    password: Dolapo2021@@
+    password: password
     baseline-description: "init"
     baseline-version: 0
 

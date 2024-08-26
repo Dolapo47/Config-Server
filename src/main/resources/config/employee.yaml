@@ -19,7 +19,7 @@ spring:
     baseline-on-migrate: true
     enabled: true
     user: postgres
-    password: password
+    password: Password@123
     baseline-description: "init"
     baseline-version: 0
 
